@@ -1,0 +1,19 @@
+<h1>List of Users</h1>
+<h1 *ngIf="show" else elseBlock>Loading...</h1>
+
+<table #elseBlock class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">User</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.id}}</td>
+      <td>{{user.name | nameCap}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+  </tbody>
+</table>
