@@ -1,0 +1,8 @@
+<h1>
+    Home
+</h1>
+  
+<h3 *ngIf="name.length>1">{{name | uppercase}}</h3>
+  
+<input [(ngModel)]="name" placeholder="name" />
+  
